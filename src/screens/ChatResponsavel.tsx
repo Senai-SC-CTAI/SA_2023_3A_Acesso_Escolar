@@ -22,7 +22,7 @@ export function ChatResponsavel() {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.title}>ÁREA DO RESPONSAVEL</Text>
+        <Text style={styles.title}>ÁREA DO RESPONSAVELL</Text>
         <Text style={styles.description}>Chat</Text>
         <Text style={styles.description2}>Conversando com Sámira Alvandará</Text>
         <View style={styles.line} />
