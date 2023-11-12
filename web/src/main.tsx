@@ -4,6 +4,9 @@ import ReactDOM from 'react-dom/client'
 import Login from './screens/Login/index.tsx'
 import HomeALU from './screens/HomeALU/index.tsx'
 import HomeADM from './screens/HomeADM/index.tsx'
+import CadastraALU from './screens/CadastraALU/index.tsx'
+import EntradaTARDIA from './screens/EntradaTARDIA/index.tsx'
+
 
 
 import {
@@ -25,6 +28,14 @@ const router = createBrowserRouter(
       {
         path: "/homeAdm",
         element: <HomeADM />
+      },
+      {
+        path: "/cadastraAlu",
+        element: <CadastraALU />
+      },
+      {
+        path: "/entradaTardia",
+        element: <EntradaTARDIA />
       },
       {
         path: "/",

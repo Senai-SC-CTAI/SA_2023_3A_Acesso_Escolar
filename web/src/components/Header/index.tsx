@@ -23,10 +23,10 @@ function Header() {
                 <NavLink to="/home">Home</NavLink>
               </li>
               <li>
-                <NavLink to="/Buscar">Cadastrar Aluno</NavLink>
+                <NavLink to="/CadastraALU">Cadastrar Aluno</NavLink>
               </li>
               <li>
-                <NavLink to="/sobre">Registrar Entrada Tardia</NavLink>
+                <NavLink to="/EntradaTARDIA">Registrar Entrada Tardia</NavLink>
               </li>
               <li>
                 <NavLink to="/gerenciamento">Registrar Saida Antecipada</NavLink>
