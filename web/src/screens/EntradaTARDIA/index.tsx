@@ -40,7 +40,7 @@ function App() {
   };
 
 
-  const handleDelete = async (rg) => {
+  const handleDelete = async (cpf) => {
     try {
       await axios.delete(`http://localhost:8090/registroentrada/${rg}`);
       fetchRegistroEntrada();
@@ -83,11 +83,11 @@ function App() {
       {/* Lista de alunos */}
       <ul>
         {registroentrada.map((registroentrada) => (
-          <li key={registroentrada.cpf}>
-            {registroentradao.cpf} - {registroentrada.data_hora} 
+          <li key={novoRegistroEntrada.cpf}>
+            {novoRegistroEntrada.cpf} - {novoRegistroEntrada.data_hora} 
 
 
-            <button onClick={() => handleDelete(registroentrada.cpf)}>Excluir</button>
+            <button onClick={() => handleDelete(novoRegistroEntrada.cpf)}>Excluir</button>
           </li>
         ))}
       </ul>
