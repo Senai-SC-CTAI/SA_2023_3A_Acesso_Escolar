@@ -1,19 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-
 function App() {
-  const [registroentrada, setRegistroEntrada] = useState([]);
+  const [registroEntrada, setRegistroEntrada] = useState([]);
   const [novoRegistroEntrada, setNovoRegistroEntrada] = useState({
     data_hora: '',
     cpf: '',
   });
 
-
   useEffect(() => {
     fetchRegistroEntrada();
   }, []);
-
 
   const fetchRegistroEntrada = async () => {
     try {
@@ -23,7 +20,6 @@ function App() {
       console.error('Erro ao buscar registroentrada:', error);
     }
   };
-
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -39,24 +35,19 @@ function App() {
     }
   };
 
-
   const handleDelete = async (cpf) => {
     try {
-      await axios.delete(`http://localhost:8090/registroentrada/${rg}`);
+      await axios.delete(`http://localhost:8090/registroentrada/${cpf}`);
       fetchRegistroEntrada();
     } catch (error) {
       console.error('Erro ao excluir registroentrada:', error);
     }
   };
 
-
   return (
     <div>
-      {/* Cabeçalho */}
-      <h1>Gerenciamento de Entarada Tardia</h1>
+      <h1>Gerenciamento de Entrada Tardia</h1>
 
-
-      {/* Formulário de adição de aluno */}
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -79,21 +70,16 @@ function App() {
         <button type="submit">Adicionar Entrada</button>
       </form>
 
-
-      {/* Lista de alunos */}
       <ul>
-        {registroentrada.map((registroentrada) => (
-          <li key={novoRegistroEntrada.cpf}>
-            {novoRegistroEntrada.cpf} - {novoRegistroEntrada.data_hora} 
-
-
-            <button onClick={() => handleDelete(novoRegistroEntrada.cpf)}>Excluir</button>
+        {registroEntrada.map((registro) => (
+          <li key={registro.cpf}>
+            {registro.cpf} - {registro.data_hora}
+            <button onClick={() => handleDelete(registro.cpf)}>Excluir</button>
           </li>
         ))}
       </ul>
     </div>
   );
 }
-
 
 export default App;
