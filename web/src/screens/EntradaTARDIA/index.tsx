@@ -71,8 +71,8 @@ function App() {
       </form>
 
       <ul>
-        {registroEntrada.map((registro) => (
-          <li key={registro.cpf}>
+        {registroEntrada.map((registro, index) => (
+          <li key={`${registro.cpf}-${index}`}>
             {registro.cpf} - {registro.data_hora}
             <button onClick={() => handleDelete(registro.cpf)}>Excluir</button>
           </li>

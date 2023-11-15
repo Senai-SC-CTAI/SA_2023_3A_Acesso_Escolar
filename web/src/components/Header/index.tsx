@@ -29,7 +29,7 @@ function Header() {
                 <NavLink to="/EntradaTARDIA">Registrar Entrada Tardia</NavLink>
               </li>
               <li>
-                <NavLink to="/gerenciamento">Registrar Saida Antecipada</NavLink>
+                <NavLink to="/SaidaANTECIPADA">Registrar Saida Antecipada</NavLink>
               </li>
             </ul>
           </nav>
