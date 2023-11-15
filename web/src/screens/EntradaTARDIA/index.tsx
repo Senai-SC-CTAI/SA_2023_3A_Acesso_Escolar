@@ -34,10 +34,9 @@ function App() {
       console.error('Erro ao criar registroentrada:', error);
     }
   };
-
-  const handleDelete = async (cpf) => {
+  const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8090/registroentrada/${cpf}`);
+      await axios.delete(`http://localhost:8090/registroentrada/${id}`);
       fetchRegistroEntrada();
     } catch (error) {
       console.error('Erro ao excluir registroentrada:', error);
@@ -72,9 +71,9 @@ function App() {
 
       <ul>
         {registroEntrada.map((registro, index) => (
-          <li key={`${registro.cpf}-${index}`}>
-            {registro.cpf} - {registro.data_hora}
-            <button onClick={() => handleDelete(registro.cpf)}>Excluir</button>
+          <li key={`${registro.id}-${index}`}>
+            {registro.cpf} {registro.data_hora}
+            <button onClick={() => handleDelete(registro.id)}>Excluir</button>
           </li>
         ))}
       </ul>
