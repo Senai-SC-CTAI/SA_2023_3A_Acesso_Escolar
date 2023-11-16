@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 function App() {
-  const [RegistroSaida, setRegistroSaida] = useState([]);
+  const [registroSaida, setRegistroSaida] = useState([]);
   const [novoRegistroSaida, setNovoRegistroSaida] = useState({
     data_hora: '',
     cpf: '',
@@ -35,20 +35,12 @@ function App() {
     }
   };
 
-  const handleDelete = async (cpf) => {
+  const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:8090/registrosaida/${cpf}`);
+      await axios.delete(`http://localhost:8090/registrosaida/${id}`);
       fetchRegistroSaida();
     } catch (error) {
       console.error('Erro ao excluir registrosaida:', error);
-      if (error.response) {
-        console.error('Status de erro:', error.response.status);
-        console.error('Dados do erro:', error.response.data);
-      } else if (error.request) {
-        console.error('Sem resposta do servidor');
-      } else {
-        console.error('Erro na configuração da solicitação:', error.message);
-      }
     }
   };
 
@@ -79,10 +71,10 @@ function App() {
       </form>
 
       <ul>
-        {RegistroSaida.map((RegistroSaida) => (
-          <li key={RegistroSaida.cpf}>
-            {RegistroSaida.data_hora} - {RegistroSaida.cpf} 
-            <button onClick={() => handleDelete(RegistroSaida.cpf)}>Excluir</button>
+        {registroSaida.map((registro, index) => (
+          <li key={`${registro.id}-${index}`}>
+            {registro.data_hora} - {registro.cpf} 
+            <button onClick={() => handleDelete(registro.id)}>Excluir</button>
           </li>
         ))}
       </ul>
