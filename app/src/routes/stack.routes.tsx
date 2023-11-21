@@ -16,6 +16,7 @@ import { ChatAluno} from '../screens/ChatAluno';
 import { ChatResponsavel} from '../screens/ChatResponsavel';
 import { PresenteProfessor} from '../screens/PresenteProfessor';
 import { ScreenEscolha } from '../screens/ScreenEscolha';
+import { Cadastra } from '../screens/Cadastra';
 
 
 const Stack = createNativeStackNavigator();
@@ -96,6 +97,11 @@ export function StackRoutes() {
             <Stack.Screen
                 name="ScreenEscolha"
                 component={ScreenEscolha}
+                options={{ headerShown: true, title: false }}
+            />
+            <Stack.Screen
+                name="Cadastra"
+                component={Cadastra}
                 options={{ headerShown: true, title: false }}
             />
         </Stack.Navigator>

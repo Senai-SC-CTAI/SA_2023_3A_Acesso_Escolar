@@ -38,6 +38,7 @@ export function HomeAdministrador() {
       </View>
       <View style={styles.row}>
         <CustomButton title="Notificacoes" iconName="bell" screenName="Notifica" />
+        <CustomButton title="anderson" iconName="bell" screenName="Cadastra" />
       </View>
     </View>
   );
