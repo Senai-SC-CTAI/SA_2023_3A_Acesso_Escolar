@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import org.springframework.http.ResponseEntity;
 @CrossOrigin(origins = "http://localhost:5173")//Endereço do front
+@CrossOrigin(origins = "http://localhost:19006")//EndereÃ§o do front*/
 @RestController
 @RequestMapping("/registrosaida")
 public class RegistroSaidaController {
