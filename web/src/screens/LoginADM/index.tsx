@@ -2,11 +2,11 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './style.css';
 
-export default function Login() {
+export default function LoginADM() {
   return (
     <div className="container-Login">
       <br />
-      <div className="div-content"><h2 className="title">Login Aluno</h2>
+      <div className="div-content"><h2 className="title">Login ADM</h2>
         <div className="input-container-Login">
           <h3 className="input-label-Login">E-mail</h3>
           <input className='input-Login' type="email" placeholder="exemplo.estudante.sesisenai.org.br" />
@@ -20,12 +20,7 @@ export default function Login() {
           </div>
         </div>
 
-        <Link to="/homeALU" className="submit-button">Entrar</Link>
-        <br />
-        <p className="ou">ou</p>
-        <br />
-        <Link to="/loginRES" className="submit-button">Entrar como Responsavel</Link>
-        <Link to="/loginADM" className="submit-button">Entrar como Administrador</Link>
+        <Link to="/homeADM" className="submit-button">Entrar</Link>
       </div>
     </div>
   );

@@ -9,8 +9,8 @@ import CadastraALU from './screens/CadastraALU/index.tsx'
 import EntradaTARDIA from './screens/EntradaTARDIA/index.tsx'
 import SaidaANTECIPADA from './screens/SaidaANTECIPADA/index.tsx'
 import ContaALU from './screens/ContaALU/index.tsx'
-
-
+import LoginADM from './screens/LoginADM/index.tsx'
+import LoginRES from './screens/LoginRES/index.tsx'
 
 import {
   createBrowserRouter,
@@ -51,6 +51,14 @@ const router = createBrowserRouter(
       {
         path: "/contaAlu",
         element: <ContaALU />
+      },
+      {
+        path: "/loginAdm",
+        element: <LoginADM />
+      },
+      {
+        path: "/loginRes",
+        element: <LoginRES />
       },
       {
         path: "/",
