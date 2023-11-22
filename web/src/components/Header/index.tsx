@@ -19,18 +19,24 @@ function Header() {
           </NavLink>
           <nav className="nav">
             <ul>
-              <li>
-                <NavLink to="/home">Home</NavLink>
+              <div class='fundoMOD'>
+              <li class='blocos'>
+                <br />
+                <NavLink to="/home" style={{ fontStyle: 'normal' }}>Home</NavLink>
               </li>
-              <li>
-                <NavLink to="/CadastraALU">Cadastrar Aluno</NavLink>
+              <li class='blocos'>
+                <br />
+                <NavLink to="/CadastraALU" style={{ fontStyle: 'normal' }}>Cadastrar Aluno</NavLink>
               </li>
-              <li>
-                <NavLink to="/EntradaTARDIA">Registrar Entrada Tardia</NavLink>
+              <li class='blocos'>
+                  <br />
+                <NavLink to="/EntradaTARDIA" style={{ fontStyle: 'normal' }}>Registrar Entrada Tardia</NavLink>
               </li>
-              <li>
-                <NavLink to="/SaidaANTECIPADA">Registrar Saida Antecipada</NavLink>
+              <li class='blocos'>
+                <br />
+                <NavLink to="/SaidaANTECIPADA" style={{ fontStyle: 'normal' }}>Registrar Saida Antecipada</NavLink>
               </li>
+              </div>
             </ul>
           </nav>
         </div>

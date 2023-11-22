@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './style.css'
 
 function App() {
   const [registroEntrada, setRegistroEntrada] = useState([]);
@@ -45,10 +46,11 @@ function App() {
 
   return (
     <div>
-      <h1>Gerenciamento de Entrada Tardia</h1>
+        <div class='fundo'>
+      <h1 class='h1MOD' >Gerenciamento de Entrada Tardia</h1>
 
       <form onSubmit={handleSubmit}>
-        <input
+        <input class="btnCAD"
           type="text"
           name="data_hora"
           placeholder="Data e Hora"
@@ -57,7 +59,7 @@ function App() {
             setNovoRegistroEntrada({ ...novoRegistroEntrada, data_hora: event.target.value })
           }
         />
-        <input
+        <input class="btnCAD"
           type="text"
           name="cpf"
           placeholder="CPF"
@@ -77,6 +79,7 @@ function App() {
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 }

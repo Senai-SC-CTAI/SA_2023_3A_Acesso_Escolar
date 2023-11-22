@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-
+import './style.css';
 
 function App() {
   const [alunos, setAlunos] = useState([]);
@@ -62,13 +62,14 @@ function App() {
 
   return (
     <div>
+      <div class='fundo'>
       {/* Cabeçalho */}
-      <h1>Gerenciamento de Alunos</h1>
+      <h1>Gerenciamento <br />de Alunos</h1>
 
 
       {/* Formulário de adição de aluno */}
       <form onSubmit={handleSubmit}>
-        <input
+        <input class="btnCAD"
           type="text"
           name="rg"
           placeholder="RG"
@@ -77,7 +78,7 @@ function App() {
             setNovoAluno({ ...novoAluno, rg: event.target.value })
           }
         />
-        <input
+        <input class="btnCAD"
           type="text"
           name="cpf"
           placeholder="CPF"
@@ -86,7 +87,7 @@ function App() {
             setNovoAluno({ ...novoAluno, cpf: event.target.value })
           }
         />
-        <input
+        <input class="btnCAD"
           type="text"
           name="numCelular"
           placeholder="Número de Celular"
@@ -95,7 +96,7 @@ function App() {
             setNovoAluno({ ...novoAluno, numCelular: event.target.value })
           }
         />
-        <input
+        <input class="btnCAD"
           type="text"
           name="email"
           placeholder="Email"
@@ -104,7 +105,7 @@ function App() {
             setNovoAluno({ ...novoAluno, email: event.target.value })
           }
         />
-        <input
+        <input class="btnCAD"
           type="text"
           name="dataNasc"
           placeholder="Data de Nascimento"
@@ -113,7 +114,7 @@ function App() {
             setNovoAluno({ ...novoAluno, dataNasc: event.target.value })
           }
         />
-        <input
+        <input class="btnCAD"
           type="text"
           name="nome"
           placeholder="Nome"
@@ -122,7 +123,7 @@ function App() {
             setNovoAluno({ ...novoAluno, nome: event.target.value })
           }
         />
-        <input
+        <input class="btnCAD"
           type="text"
           name="idmatricula"
           placeholder="ID de Matrícula"
@@ -146,9 +147,11 @@ function App() {
           </li>
         ))}
       </ul>
+      </div>
     </div>
   );
 }
 
 
 export default App;
+

@@ -5,8 +5,9 @@ import { View, StyleSheet, TextInput, Image, Text, TouchableOpacity } from 'reac
 export function LoginResponsavel() {
   const navigation = useNavigation();
   const [cpf, setCPF] = useState('');
+  const [senha, setSenha] = useState('');
 
-  const isLoginDisabled = cpf.trim() === ''; // Disable login button if CPF is empty
+  const isLoginDisabled = cpf.trim() === '';
 
   return (
     <View style={styles.container}>
@@ -49,6 +50,12 @@ export function LoginResponsavel() {
           placeholder="CPF"
           keyboardType="numeric"
           onChangeText={(text) => setCPF(text)}
+        />
+        <TextInput
+          style={styles.input}
+          placeholder="Senha"
+          keyboardType="text"
+          onChangeText={(text) => setSenha(text)}
         />
       </View>
       <View style={[styles.layer, styles.whiteLayer]} />

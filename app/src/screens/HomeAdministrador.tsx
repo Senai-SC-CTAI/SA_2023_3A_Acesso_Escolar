@@ -1,44 +1,49 @@
 import React from 'react';
 import { View, StyleSheet, TouchableOpacity, Text, Image } from 'react-native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
 
 import { useNavigation } from '@react-navigation/native';
 
 export function HomeAdministrador() {
   const navigation = useNavigation();
 
-  const CustomButton = ({ title, iconName, screenName }) => (
-    <TouchableOpacity style={styles.customButton} onPress={() => navigation.navigate(screenName)}>
+  const CustomButton = ({ title, iconName, screenName }) => {
+    const iconComponent = iconName ? (
       <Icon name={iconName} size={50} color="black" />
-      <Text style={styles.buttonText}>{title}</Text>
-    </TouchableOpacity>
-  );
+    ) : (
+      <FontAwesome name="clock-o" size={50} color="black" />
+    );
+
+    return (
+      <TouchableOpacity style={styles.customButton} onPress={() => navigation.navigate(screenName)}>
+        {iconComponent}
+        <Text style={styles.buttonText}>{title}</Text>
+      </TouchableOpacity>
+    );
+  };
 
   return (
     <View style={styles.container}>
       {/* Image container */}
       <View style={styles.imageContainer}>
-        <Image
-          source={require('../img/senai.png')}
-          style={styles.logo}
-          resizeMode="contain"
-        />
+        <Image source={require('../img/senai.png')} style={styles.logo} resizeMode="contain" />
       </View>
       <View style={styles.topContent}>
         <Text style={styles.title}>Acesso Escolar</Text>
         <Text style={styles.subtitle}>Sistema de Entrada e Saída</Text>
       </View>
       <View style={styles.row}>
-        <CustomButton title="Historico" iconName="history" screenName="ScreenEscolha" />
-        <CustomButton title="Relatorio" iconName="file-text-o" screenName="RelatorioAluno" />
-      </View>
-      <View style={styles.row}>
         <CustomButton title="Conta" iconName="user" screenName="DadosAluno" />
         <CustomButton title="Chat" iconName="comment-o" screenName="screenE" />
       </View>
       <View style={styles.row}>
-        <CustomButton title="Notificacoes" iconName="bell" screenName="Notifica" />
-        <CustomButton title="anderson" iconName="bell" screenName="Cadastra" />
+        <CustomButton title="Notificações" iconName="bell" screenName="Notifica" />
+        <CustomButton title="Registrar Aluno" iconName="user" screenName="RegistraAluno" />
+      </View>
+      <View style={styles.row}>
+        <CustomButton title="Registrar Entrada Tardia" screenName="CadastraEntrada" />
+        <CustomButton title="Registrar Saída Antecipada" screenName="CadastraSaida" />
       </View>
     </View>
   );
@@ -53,7 +58,7 @@ const styles = StyleSheet.create({
   topContent: {
     alignItems: 'center',
     marginBottom: 20,
-    marginTop: -20, // Adjust the marginTop to move the "Acesso ADM" text closer to the center
+    marginTop: -20,
   },
   title: {
     fontSize: 24,
@@ -84,7 +89,6 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     marginTop: 10,
   },
-  // Image container styles
   imageContainer: {
     justifyContent: 'center',
     alignItems: 'center',

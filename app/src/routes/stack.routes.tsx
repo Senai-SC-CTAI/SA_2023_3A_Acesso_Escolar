@@ -16,7 +16,9 @@ import { ChatAluno} from '../screens/ChatAluno';
 import { ChatResponsavel} from '../screens/ChatResponsavel';
 import { PresenteProfessor} from '../screens/PresenteProfessor';
 import { ScreenEscolha } from '../screens/ScreenEscolha';
-import { Cadastra } from '../screens/Cadastra';
+import { CadastraEntrada } from '../screens/CadastraEntrada';
+import { RegistraAluno } from '../screens/RegistraAluno';
+import { CadastraSaida } from '../screens/CadastraSaida';
 
 
 const Stack = createNativeStackNavigator();
@@ -100,8 +102,18 @@ export function StackRoutes() {
                 options={{ headerShown: true, title: false }}
             />
             <Stack.Screen
-                name="Cadastra"
-                component={Cadastra}
+                name="CadastraEntrada"
+                component={CadastraEntrada}
+                options={{ headerShown: true, title: false }}
+            />
+            <Stack.Screen
+                name="RegistraAluno"
+                component={RegistraAluno}
+                options={{ headerShown: true, title: false }}
+            />
+            <Stack.Screen
+                name="CadastraSaida"
+                component={CadastraSaida}
                 options={{ headerShown: true, title: false }}
             />
         </Stack.Navigator>

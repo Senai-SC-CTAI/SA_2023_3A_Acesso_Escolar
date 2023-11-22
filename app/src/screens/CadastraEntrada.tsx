@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigation } from '@react-navigation/native';
 
-export function Cadastra() {
+export function CadastraEntrada() {
   const navigation = useNavigation();
   const [registroEntrada, setRegistroEntrada] = useState([]);
   const [novoRegistroEntrada, setNovoRegistroEntrada] = useState({
