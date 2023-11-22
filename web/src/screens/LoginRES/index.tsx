@@ -8,8 +8,8 @@ export default function LoginRES() {
       <br />
       <div className="div-content"><h2 className="title">Login Responsavel</h2>
         <div className="input-container-Login">
-          <h3 className="input-label-Login">E-mail</h3>
-          <input className='input-Login' type="email" placeholder="exemplo.estudante.sesisenai.org.br" />
+          <h3 className="input-label-Login">CPF</h3>
+          <input className='input-Login' type="email" placeholder="Insira seu CPF" />
         </div>
         <div className="input-container-Login">
           <h3 className="input-label-Login">Senha</h3>
