@@ -45,11 +45,67 @@ export function CadastraSaida() {
     }
   };
 
-  return (
-    <div>
-      <h1>Gerenciamento de Saida</h1>
+  // Estilos
+  const styles = {
+    container: {
+      maxWidth: '600px',
+      margin: 'auto',
+      padding: '20px',
+      backgroundColor: '#f8f8f8',
+      borderRadius: '8px',
+      boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)',
+    },
+    header: {
+      textAlign: 'center',
+      color: '#333',
+    },
+    form: {
+      display: 'flex',
+      flexDirection: 'column',
+      marginBottom: '20px',
+    },
+    input: {
+      margin: '5px 0',
+      padding: '8px',
+      borderRadius: '4px',
+      border: '1px solid #ddd',
+    },
+    addButton: {
+      backgroundColor: '#7ec9ff',
+      color: 'white',
+      border: 'none',
+      padding: '10px',
+      borderRadius: '4px',
+      cursor: 'pointer',
+    },
+    ul: {
+      listStyle: 'none',
+      padding: '0',
+    },
+    li: {
+      marginBottom: '10px',
+      padding: '10px',
+      border: '1px solid #ddd',
+      borderRadius: '4px',
+      display: 'flex',
+      justifyContent: 'space-between',
+      alignItems: 'center',
+    },
+    deleteButton: {
+      backgroundColor: '#f44336',
+      color: 'white',
+      border: 'none',
+      padding: '8px',
+      borderRadius: '4px',
+      cursor: 'pointer',
+    },
+  };
 
-      <form onSubmit={handleSubmit}>
+  return (
+    <div style={styles.container}>
+      <h1 style={styles.header}>Gerenciamento de Saída</h1>
+
+      <form style={styles.form} onSubmit={handleSubmit}>
         <input
           type="text"
           name="data_hora"
@@ -58,6 +114,7 @@ export function CadastraSaida() {
           onChange={(event) =>
             setNovoRegistroSaida({ ...novoRegistroSaida, data_hora: event.target.value })
           }
+          style={styles.input}
         />
         <input
           type="text"
@@ -67,19 +124,19 @@ export function CadastraSaida() {
           onChange={(event) =>
             setNovoRegistroSaida({ ...novoRegistroSaida, cpf: event.target.value })
           }
+          style={styles.input}
         />
-        <button type="submit">Adicionar Saida</button>
+        <button style={styles.addButton} type="submit">Adicionar Saída</button>
       </form>
 
-      <ul>
+      <ul style={styles.ul}>
         {registroSaida.map((registro, index) => (
-          <li key={`${registro.id}-${index}`}>
-            {registro.data_hora} - {registro.cpf} 
-            <button onClick={() => handleDelete(registro.id)}>Excluir</button>
+          <li key={`${registro.id}-${index}`} style={styles.li}>
+            {registro.data_hora} - {registro.cpf}
+            <button style={styles.deleteButton} onClick={() => handleDelete(registro.id)}>Excluir</button>
           </li>
         ))}
       </ul>
     </div>
   );
 }
-
