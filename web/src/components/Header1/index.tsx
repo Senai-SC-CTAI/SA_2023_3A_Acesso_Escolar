@@ -27,11 +27,11 @@ function Header1() {
               </li>
               <li class='blocos'>
                 <br />
-                <NavLink to="/CadastraALU" style={{ fontStyle: 'normal' }}>Verificar presenca</NavLink>
+                <NavLink to="/home" style={{ fontStyle: 'normal' }}>Verificar presenca</NavLink>
               </li>
               <li class='blocos'>
                 <br />
-                <NavLink to="/EntradaTARDIA" style={{ fontStyle: 'normal' }}>Tirar relatorio</NavLink>
+                <NavLink to="/home" style={{ fontStyle: 'normal' }}>Tirar relatorio</NavLink>
               </li>
               </div>
             </ul>

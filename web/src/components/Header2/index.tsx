@@ -11,23 +11,29 @@ function Header2() {
 
   return (
     <>
-      <header className="header1">
+      <header className="header2">
         <div className="headerContent1">
           <NavLink to="/home">
             <div className="logo" onClick={() => handleItemClick('Home')}>
             </div>
           </NavLink>
           <nav className="nav">
+
             <ul>
-              <li>
-                <NavLink to="/home">Conta</NavLink>
+              <div class='fundoMOD' >
+              <li class='blocos'>
+                <br />
+                <NavLink to="/home" style={{ fontStyle: 'normal' }}>Conta</NavLink>
               </li>
-              <li>
-                <NavLink to="/CadastraALU">Verificar presenca</NavLink>
+              <li class='blocos'>
+                <br />
+                <NavLink to="/home" style={{ fontStyle: 'normal' }}>Verificar presenca</NavLink>
               </li>
-              <li>
-                <NavLink to="/EntradaTARDIA">Tirar relatorio</NavLink>
+              <li class='blocos'>
+                <br />
+                <NavLink to="/home" style={{ fontStyle: 'normal' }}>Tirar relatorio</NavLink>
               </li>
+              </div>
             </ul>
           </nav>
         </div>
