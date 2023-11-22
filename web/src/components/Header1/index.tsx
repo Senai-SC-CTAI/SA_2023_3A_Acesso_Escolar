@@ -23,7 +23,7 @@ function Header1() {
               <div class='fundoMOD' >
               <li class='blocos'>
                 <br />
-                <NavLink to="/home" style={{ fontStyle: 'normal' }}>Conta</NavLink>
+                <NavLink to="/contaAlu" style={{ fontStyle: 'normal' }}>Conta</NavLink>
               </li>
               <li class='blocos'>
                 <br />
