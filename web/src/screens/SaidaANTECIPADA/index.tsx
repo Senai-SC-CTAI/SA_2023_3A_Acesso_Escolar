@@ -69,17 +69,18 @@ function App() {
             setNovoRegistroSaida({ ...novoRegistroSaida, cpf: event.target.value })
           }
         />
-        <button type="submit">Adicionar Saida</button>
+        <button  type="submit">Adicionar Saida</button>
       </form>
-
+      <div style={{ maxHeight: '300px', overflowY: 'auto' }}>
       <ul>
         {registroSaida.map((registro, index) => (
           <li key={`${registro.id}-${index}`}>
             {registro.data_hora} - {registro.cpf} 
-            <button onClick={() => handleDelete(registro.id)}>Excluir</button>
+            <button class='gg' onClick={() => handleDelete(registro.id)}>Excluir</button>
           </li>
         ))}
       </ul>
+    </div>
     </div>
     </div>
   );

@@ -8,6 +8,7 @@ import HomeADM from './screens/HomeADM/index.tsx'
 import CadastraALU from './screens/CadastraALU/index.tsx'
 import EntradaTARDIA from './screens/EntradaTARDIA/index.tsx'
 import SaidaANTECIPADA from './screens/SaidaANTECIPADA/index.tsx'
+import ContaALU from './screens/ContaALU/index.tsx'
 
 
 
@@ -46,6 +47,10 @@ const router = createBrowserRouter(
       {
         path: "/saidaAntecipada",
         element: <SaidaANTECIPADA />
+      },
+      {
+        path: "/contaAlu",
+        element: <ContaALU />
       },
       {
         path: "/",
