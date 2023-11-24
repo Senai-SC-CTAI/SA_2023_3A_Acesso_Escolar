@@ -11,6 +11,10 @@ import SaidaANTECIPADA from './screens/SaidaANTECIPADA/index.tsx'
 import ContaALU from './screens/ContaALU/index.tsx'
 import LoginADM from './screens/LoginADM/index.tsx'
 import LoginRES from './screens/LoginRES/index.tsx'
+import VerificaPRESENTE from './screens/VerificaPRESENTE/index.tsx'
+import TirarRELATORIO from './screens/TirarRELATORIO/index.tsx'
+import ContaRES from './screens/ContaRES/index.tsx'
+import ContaADM from './screens/ContaADM/index.tsx'
 
 import {
   createBrowserRouter,
@@ -59,6 +63,22 @@ const router = createBrowserRouter(
       {
         path: "/loginRes",
         element: <LoginRES />
+      },
+      {
+        path: "/verificarPresente",
+        element: <VerificaPRESENTE />
+      },
+      {
+        path: "/tirarRelatorio",
+        element: <TirarRELATORIO />
+      },
+      {
+        path: "/contaRES",
+        element: <ContaRES />
+      },
+      {
+        path: "/contaADM",
+        element: <ContaADM />
       },
       {
         path: "/",

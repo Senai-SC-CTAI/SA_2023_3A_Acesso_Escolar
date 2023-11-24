@@ -22,6 +22,10 @@ function Header() {
               <div class='fundoMOD'>
               <li class='blocos'>
                 <br />
+                <NavLink to="/ContaADM" style={{ fontStyle: 'normal' }}>Ver Conta</NavLink>
+              </li>
+              <li class='blocos'>
+                <br />
                 <NavLink to="/CadastraALU" style={{ fontStyle: 'normal' }}>Cadastrar Aluno</NavLink>
               </li>
               <li class='blocos'>
